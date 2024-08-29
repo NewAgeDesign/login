@@ -1,2 +1,3 @@
-# login
-Login System for jacky
+# login AJAX
+A revision of my previous attempt at a login system, my attempt at learning AJAX by building my own made APIs, config files, New features, seamless designs and so much more, do the CSS styling in style.css, UIGod is an experimental framework with no current flaws, If you make any changes please let me know, Id love your input.
+The code is Generally applicable to most applications and is highly secure. feel free to use it in your projects, function.php holds the backend scripting, index.php renders the frontend, footer holds the links to the JS files as well as the footer(should you make one, and header holds the session start, database connection and a few PHP functions applicable in the backend, I use JSON entirely so for parts that need HTML rendering or just happen to run HTML, Ive enclosed in PHPs Object buffer functions, research about those at your own time.
