@@ -1,4 +1,6 @@
 <?php
+$start_time = microtime(true);
+$start_memory = memory_get_usage();
 header('Content-Type: application/json');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -113,9 +115,25 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 break;
             }
         break;
+
+        // Logout
+        case $data['action'] === 'logout':
+            session_unset();
+            session_destroy();
+            errorm($res, true, 'Logout Success', 'You\'ve successfully logged out.');
     }
 }else{
 }
+$end_time = microtime(true);
+
+// Calculate execution time
+$execution_time = $end_time - $start_time;
+
+$end_memory = memory_get_usage();
+$peak_memory = memory_get_peak_usage();
+// Display the current response error message along with the status
+
+// errorm($res,$res['errormsg']['success'],$res['errormsg']['head'],$res['errormsg']['message'].'<br><br>Execution time: ' . round($execution_time, 3) . ' seconds<br>Memory used: ' . round(($end_memory - $start_memory) / 1024 / 1024, 3) . ' MBs<br>Peak memory usage: ' . round($peak_memory / 1024 / 1024, 3) . ' MBs');
 
 
 echo json_encode($res);

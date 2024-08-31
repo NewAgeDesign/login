@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'fregular';
+    src: url('fregular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'dxslight';
+    src: url('dxslight.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'foutline';
+    src: url('foutline.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'foitalic';
+    src: url('foitalic.woff2') format('woff2');
+}
 /* UIGod Version: 1.0.0 */
 *,*::before,*::after{
     /*-webkit-touch-callout: none;
@@ -22,6 +41,29 @@
     padding: 0;
     border: 0;
     margin: 0;
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+        box-shadow: 0 0 0px 1000px transparent inset !important;
+        -webkit-text-fill-color: var(--secondary2) !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+        box-shadow: 0 0 0px 1000px transparent inset !important;
+        -webkit-text-fill-color: var(--tertiary) !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+   
+
+    /* Custom color example */
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important; /* Custom color with opacity */
+        box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important; /* Custom color with opacity */
+    }
 
     ::-webkit-scrollbar-thumb:vertical {
         background-color: #88888800;
@@ -144,8 +186,9 @@ body{
         text-transform: none;
         font-weight: normal;
         white-space: nowrap;
-        font-style: normal;
         word-wrap: normal;
+        font-style: 22pt;
+        cursor: pointer;
         direction: ltr;
     }
     
